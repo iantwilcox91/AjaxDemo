@@ -41,9 +41,9 @@ namespace AjaxDemo.Controllers
         }
 
         [HttpPost]
-        public IActionResult NewDestination(string newCity, string newCountry)
+        public IActionResult NewDestination(string newCity, string newCountry, int id = 0)
         {
-            Destination newDestination = new Destination(newCity, newCountry);
+            Destination newDestination = new Destination(newCity, newCountry, id);
             db.Destinations.Add(newDestination);
             db.SaveChanges();
             return Json(newDestination);

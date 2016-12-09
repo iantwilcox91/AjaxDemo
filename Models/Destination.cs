@@ -14,14 +14,15 @@ namespace AjaxDemo.Models
     public class Destination
     {
         [Key]
+        public int Id { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-        public int Id { get; set; }
-        public Destination(string city, string country, int id = 0)
+        
+        public Destination(string city, string country, int Id)
         {
             City = city;
             Country = country;
-            Id = id;
+            Id = 0;
         }
         public Destination() { }
     }

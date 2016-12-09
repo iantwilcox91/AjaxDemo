@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using AjaxDemo.Models;
 
-namespace AjaxDemo.Migrations
+namespace AjaxDemoIan.Migrations
 {
     [DbContext(typeof(AjaxDemoContext))]
     partial class AjaxDemoContextModelSnapshot : ModelSnapshot
@@ -18,13 +18,14 @@ namespace AjaxDemo.Migrations
 
             modelBuilder.Entity("AjaxDemo.Models.Destination", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
                     b.Property<string>("City");
 
                     b.Property<string>("Country");
 
-                    b.Property<int>("Id");
-
-                    b.HasKey("City");
+                    b.HasKey("Id");
 
                     b.ToTable("Destinations");
                 });
